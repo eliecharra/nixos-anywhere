@@ -25,6 +25,7 @@ module "install" {
   target_user                  = local.install_user
   target_host                  = var.target_host
   target_port                  = local.install_port
+  build_on_remote              = var.build_on_remote
   nixos_partitioner            = module.partitioner-build.result.out
   nixos_system                 = module.system-build.result.out
   ssh_private_key              = var.install_ssh_key
